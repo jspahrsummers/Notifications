@@ -16,6 +16,10 @@
 		D0DC10FC19D7E01000980430 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC10FB19D7E01000980430 /* NotificationsTests.swift */; };
 		D0DC114A19D7E0F900980430 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DC113F19D7E0DE00980430 /* ReactiveCocoa.framework */; };
 		D0DC115A19D7E12A00980430 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DC115319D7E12100980430 /* LlamaKit.framework */; };
+		D0DC117D19D7E3EB00980430 /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC117C19D7E3EB00980430 /* GitHubClient.swift */; };
+		D0DC117F19D7E75600980430 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC117E19D7E75600980430 /* Notification.swift */; };
+		D0DC118119D7E85400980430 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC118019D7E85400980430 /* Repository.swift */; };
+		D0DC118319D7E88A00980430 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC118219D7E88A00980430 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,10 @@
 		D0DC117019D7E1AD00980430 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
 		D0DC117119D7E1AD00980430 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		D0DC117219D7E1AD00980430 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D0DC117C19D7E3EB00980430 /* GitHubClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
+		D0DC117E19D7E75600980430 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		D0DC118019D7E85400980430 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		D0DC118219D7E88A00980430 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,12 +168,9 @@
 		D0DC10E019D7E01000980430 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				D0DC10E319D7E01000980430 /* AppDelegate.swift */,
-				D0DC10E519D7E01000980430 /* MasterViewController.swift */,
-				D0DC10E719D7E01000980430 /* DetailViewController.swift */,
-				D0DC10E919D7E01000980430 /* Main.storyboard */,
-				D0DC10EC19D7E01000980430 /* Images.xcassets */,
-				D0DC10EE19D7E01000980430 /* LaunchScreen.xib */,
+				D0DC117919D7E26600980430 /* Models */,
+				D0DC117B19D7E26F00980430 /* View Models */,
+				D0DC117A19D7E26A00980430 /* Views */,
 				D0DC10E119D7E01000980430 /* Supporting Files */,
 			);
 			path = Notifications;
@@ -174,6 +179,7 @@
 		D0DC10E119D7E01000980430 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0DC10EC19D7E01000980430 /* Images.xcassets */,
 				D0DC114B19D7E12100980430 /* LlamaKit.xcodeproj */,
 				D0DC113719D7E0DE00980430 /* ReactiveCocoa.xcodeproj */,
 				D0DC10E219D7E01000980430 /* Info.plist */,
@@ -286,6 +292,36 @@
 			path = "Mac OS X";
 			sourceTree = "<group>";
 		};
+		D0DC117919D7E26600980430 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC117C19D7E3EB00980430 /* GitHubClient.swift */,
+				D0DC117E19D7E75600980430 /* Notification.swift */,
+				D0DC118019D7E85400980430 /* Repository.swift */,
+				D0DC118219D7E88A00980430 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D0DC117A19D7E26A00980430 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC10E319D7E01000980430 /* AppDelegate.swift */,
+				D0DC10E519D7E01000980430 /* MasterViewController.swift */,
+				D0DC10E719D7E01000980430 /* DetailViewController.swift */,
+				D0DC10E919D7E01000980430 /* Main.storyboard */,
+				D0DC10EE19D7E01000980430 /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D0DC117B19D7E26F00980430 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,6 +371,11 @@
 				TargetAttributes = {
 					D0DC10DD19D7E01000980430 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D0DC10F419D7E01000980430 = {
 						CreatedOnToolsVersion = 6.1;
@@ -456,8 +497,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DC10E819D7E01000980430 /* DetailViewController.swift in Sources */,
+				D0DC117F19D7E75600980430 /* Notification.swift in Sources */,
 				D0DC10E619D7E01000980430 /* MasterViewController.swift in Sources */,
 				D0DC10E419D7E01000980430 /* AppDelegate.swift in Sources */,
+				D0DC117D19D7E3EB00980430 /* GitHubClient.swift in Sources */,
+				D0DC118119D7E85400980430 /* Repository.swift in Sources */,
+				D0DC118319D7E88A00980430 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
