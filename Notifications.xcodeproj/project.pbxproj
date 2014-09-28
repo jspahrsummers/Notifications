@@ -14,6 +14,8 @@
 		D0DC10ED19D7E01000980430 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DC10EC19D7E01000980430 /* Images.xcassets */; };
 		D0DC10F019D7E01000980430 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DC10EE19D7E01000980430 /* LaunchScreen.xib */; };
 		D0DC10FC19D7E01000980430 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC10FB19D7E01000980430 /* NotificationsTests.swift */; };
+		D0DC114A19D7E0F900980430 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DC113F19D7E0DE00980430 /* ReactiveCocoa.framework */; };
+		D0DC115A19D7E12A00980430 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DC115319D7E12100980430 /* LlamaKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +25,62 @@
 			proxyType = 1;
 			remoteGlobalIDString = D0DC10DD19D7E01000980430;
 			remoteInfo = Notifications;
+		};
+		D0DC113E19D7E0DE00980430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0DC113719D7E0DE00980430 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047967319666BF30066B267;
+			remoteInfo = "ReactiveCocoa-Mac";
+		};
+		D0DC114019D7E0DE00980430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0DC113719D7E0DE00980430 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047967E19666BF30066B267;
+			remoteInfo = "ReactiveCocoa-MacTests";
+		};
+		D0DC114219D7E0DE00980430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0DC113719D7E0DE00980430 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047969A19666CBF0066B267;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		D0DC114419D7E0DE00980430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0DC113719D7E0DE00980430 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04796A419666CBF0066B267;
+			remoteInfo = "ReactiveCocoa-iOSTests";
+		};
+		D0DC115219D7E12100980430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0DC114B19D7E12100980430 /* LlamaKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB2F8D8119BF637B00E4C49E;
+			remoteInfo = "LlamaKit-iOS";
+		};
+		D0DC115419D7E12100980430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0DC114B19D7E12100980430 /* LlamaKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB2F8D8C19BF637B00E4C49E;
+			remoteInfo = "LlamaKit-iOSTests";
+		};
+		D0DC115619D7E12100980430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0DC114B19D7E12100980430 /* LlamaKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0297D1019D67999009986A9;
+			remoteInfo = "LlamaKit-Mac";
+		};
+		D0DC115819D7E12100980430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0DC114B19D7E12100980430 /* LlamaKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0297D1A19D67999009986A9;
+			remoteInfo = "LlamaKit-MacTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -38,6 +96,8 @@
 		D0DC10F519D7E01000980430 /* NotificationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DC10FA19D7E01000980430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0DC10FB19D7E01000980430 /* NotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTests.swift; sourceTree = "<group>"; };
+		D0DC113719D7E0DE00980430 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = External/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = SOURCE_ROOT; };
+		D0DC114B19D7E12100980430 /* LlamaKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LlamaKit.xcodeproj; path = External/ReactiveCocoa/External/LlamaKit/LlamaKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DC115A19D7E12A00980430 /* LlamaKit.framework in Frameworks */,
+				D0DC114A19D7E0F900980430 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +155,8 @@
 		D0DC10E119D7E01000980430 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0DC114B19D7E12100980430 /* LlamaKit.xcodeproj */,
+				D0DC113719D7E0DE00980430 /* ReactiveCocoa.xcodeproj */,
 				D0DC10E219D7E01000980430 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,6 +177,28 @@
 				D0DC10FA19D7E01000980430 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0DC113819D7E0DE00980430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC113F19D7E0DE00980430 /* ReactiveCocoa.framework */,
+				D0DC114119D7E0DE00980430 /* ReactiveCocoa-MacTests.xctest */,
+				D0DC114319D7E0DE00980430 /* ReactiveCocoa.framework */,
+				D0DC114519D7E0DE00980430 /* ReactiveCocoa-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0DC114C19D7E12100980430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC115319D7E12100980430 /* LlamaKit.framework */,
+				D0DC115519D7E12100980430 /* LlamaKit-iOSTests.xctest */,
+				D0DC115719D7E12100980430 /* LlamaKit.framework */,
+				D0DC115919D7E12100980430 /* LlamaKit-MacTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +268,16 @@
 			mainGroup = D0DC10D519D7E01000980430;
 			productRefGroup = D0DC10DF19D7E01000980430 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D0DC114C19D7E12100980430 /* Products */;
+					ProjectRef = D0DC114B19D7E12100980430 /* LlamaKit.xcodeproj */;
+				},
+				{
+					ProductGroup = D0DC113819D7E0DE00980430 /* Products */;
+					ProjectRef = D0DC113719D7E0DE00980430 /* ReactiveCocoa.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D0DC10DD19D7E01000980430 /* Notifications */,
@@ -189,6 +285,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D0DC113F19D7E0DE00980430 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = D0DC113E19D7E0DE00980430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0DC114119D7E0DE00980430 /* ReactiveCocoa-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReactiveCocoa-MacTests.xctest";
+			remoteRef = D0DC114019D7E0DE00980430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0DC114319D7E0DE00980430 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = D0DC114219D7E0DE00980430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0DC114519D7E0DE00980430 /* ReactiveCocoa-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReactiveCocoa-iOSTests.xctest";
+			remoteRef = D0DC114419D7E0DE00980430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0DC115319D7E12100980430 /* LlamaKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LlamaKit.framework;
+			remoteRef = D0DC115219D7E12100980430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0DC115519D7E12100980430 /* LlamaKit-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "LlamaKit-iOSTests.xctest";
+			remoteRef = D0DC115419D7E12100980430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0DC115719D7E12100980430 /* LlamaKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LlamaKit.framework;
+			remoteRef = D0DC115619D7E12100980430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0DC115919D7E12100980430 /* LlamaKit-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "LlamaKit-MacTests.xctest";
+			remoteRef = D0DC115819D7E12100980430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D0DC10DC19D7E01000980430 /* Resources */ = {
@@ -409,6 +564,7 @@
 				D0DC110119D7E01000980430 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0DC110219D7E01000980430 /* Build configuration list for PBXNativeTarget "NotificationsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +573,7 @@
 				D0DC110419D7E01000980430 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
