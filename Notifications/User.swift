@@ -10,7 +10,7 @@ import Foundation
 import LlamaKit
 import SwiftyJSON
 
-struct User: JSONDecodable {
+struct User: JSONDecodable, Printable {
 	let ID: String
 	let login: String
 	
@@ -19,5 +19,9 @@ struct User: JSONDecodable {
 			ID: value["id"].stringValue,
 			login: value["login"].stringValue
 		))
+	}
+	
+	var description: String {
+		return "User(\(login))"
 	}
 }

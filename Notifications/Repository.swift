@@ -10,7 +10,7 @@ import Foundation
 import LlamaKit
 import SwiftyJSON
 
-struct Repository: JSONDecodable {
+struct Repository: JSONDecodable, Printable {
 	let ID: String
 	let name: String
 	let owner: User
@@ -21,5 +21,9 @@ struct Repository: JSONDecodable {
 			name: value["name"].stringValue,
 			owner: User.decode(value["owner"]).value()!
 		))
+	}
+	
+	var description: String {
+		return "Repository(\(name)/\(owner))"
 	}
 }

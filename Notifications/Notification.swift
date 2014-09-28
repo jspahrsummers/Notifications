@@ -10,8 +10,8 @@ import Foundation
 import LlamaKit
 import SwiftyJSON
 
-struct Notification: JSONDecodable {
-	struct Subject: JSONDecodable {
+struct Notification: JSONDecodable, Printable {
+	struct Subject: JSONDecodable, Printable {
 		enum Type: JSONDecodable {
 			case Issue
 			case PullRequest
@@ -43,6 +43,10 @@ struct Notification: JSONDecodable {
 				latestCommentURL: NSURL.decode(value["latest_comment_url"]).value()!,
 				type: Type.decode(value["type"]).value()
 			))
+		}
+		
+		var description: String {
+			return "Subject<title: \(title), type: \(type)>"
 		}
 	}
 	
@@ -83,12 +87,18 @@ struct Notification: JSONDecodable {
 	let ID: String
 	let reason: Reason?
 	let repository: Repository
+	let subject: Subject
 	
 	static func decode(value: JSON) -> Result<Notification> {
 		return success(self(
 			ID: value["id"].stringValue,
 			reason: Reason.decode(value["reason"]).value(),
-			repository: Repository.decode(value["repository"]).value()!
+			repository: Repository.decode(value["repository"]).value()!,
+			subject: Subject.decode(value["subject"]).value()!
 		))
+	}
+	
+	var description: String {
+		return "Notification<subject: \(subject), reason: \(reason), repository: \(repository)>"
 	}
 }
