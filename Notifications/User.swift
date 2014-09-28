@@ -7,8 +7,17 @@
 //
 
 import Foundation
+import LlamaKit
+import SwiftyJSON
 
-struct User {
+struct User: JSONDecodable {
 	let ID: String
 	let login: String
+	
+	static func decode(value: JSON) -> Result<User> {
+		return success(self(
+			ID: value["id"].stringValue,
+			login: value["login"].stringValue
+		))
+	}
 }

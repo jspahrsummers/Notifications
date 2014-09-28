@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import LlamaKit
 import ReactiveCocoa
+import SwiftyJSON
 
 class GitHubClient {
 	private let session: NSURLSession
@@ -33,6 +35,19 @@ class GitHubClient {
 		let request = NSMutableURLRequest(URL: endpoint!)
 		request.setValue(authorizationString, forHTTPHeaderField: "Authorization")
 		
-		return session.rac_dataProducerWithRequest(request)
+		return session
+			.rac_dataProducerWithRequest(request)
+			.map { (data: NSData, NSURLResponse) in JSON(data: data) }
+			.map { (values: JSON) in
+				return Producer { consumer in
+					for value in values.arrayValue {
+						consumer.put(.Next(Box(value)))
+					}
+					
+					consumer.put(.Completed)
+				}
+			}
+			.merge(identity)
+			.tryMap { Notification.decode($0) }
 	}
 }
